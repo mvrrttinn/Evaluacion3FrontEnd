@@ -9,6 +9,7 @@ export default function Footer() {
         </div>
         <div className="footer-col">
           <h4>Contacto</h4>
+          <p><i className="bi bi-envelope"></i> instagram@barberstyle</p>
           <p><i className="bi bi-geo-alt"></i> Renca, Santiago</p>
           <p><i className="bi bi-telephone"></i> +569 1234 5678</p>
           <p><i className="bi bi-clock"></i> Lun-Sáb · 10:00 - 20:00</p>
