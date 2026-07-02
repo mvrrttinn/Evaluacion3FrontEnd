@@ -3,7 +3,7 @@
 async function fetchJSON(url, options = {}) {
   try {
     const controller = new AbortController()
-    const timeoutId = setTimeout(() => controller.abort(), 8000) // 🔒 timeout 8s
+    const timeoutId = setTimeout(() => controller.abort(), 8000)
 
     const response = await fetch(url, { ...options, signal: controller.signal })
     clearTimeout(timeoutId)
