@@ -25,6 +25,7 @@ async function fetchJSON(url, options = {}) {
   }
 }
 
+
 const TEAM_API = 'https://randomuser.me/api/?results=4&nat=us,br,es&inc=name,picture,location'
 
 const especialidades = [
@@ -37,6 +38,7 @@ const especialidades = [
 export async function getTeam() {
   const { data, error } = await fetchJSON(TEAM_API)
   if (error) return { data: null, error }
+
 
   if (!data || !Array.isArray(data.results)) {
     return { data: null, error: 'Respuesta de API en formato inesperado' }
