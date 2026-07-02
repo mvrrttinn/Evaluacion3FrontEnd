@@ -15,21 +15,19 @@ export default function Booking({ onReservaCreada }) {
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value })
-    // limpia error de ese campo al modificarlo
     setErrores({ ...errores, [e.target.name]: null })
   }
 
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    // Validar antes de guardar
     const erroresValidacion = validarReserva(form)
     if (Object.keys(erroresValidacion).length > 0) {
       setErrores(erroresValidacion)
       return
     }
 
-    // Sanitizar antes de guardar
+
     const reservaLimpia = {
       nombre: sanitizeString(form.nombre),
       telefono: sanitizeString(form.telefono),
@@ -80,7 +78,7 @@ export default function Booking({ onReservaCreada }) {
           <input
             type="date" name="fecha"
             value={form.fecha} onChange={handleChange}
-            min={new Date().toISOString().split('T')[0]}   // no permite fechas pasadas en UI
+            min={new Date().toISOString().split('T')[0]}
           />
           {errores.fecha && <span className="error-msg">{errores.fecha}</span>}
 

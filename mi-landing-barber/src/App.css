@@ -1,8 +1,8 @@
-/* === Variables (tema barbería: negro + dorado) === */
+
 :root {
   --bg:       #0d0d10;
   --bg2:      #16161c;
-  --accent:   #d4a24a;   /* dorado */
+  --accent:   #d4a24a;   
   --accent2:  #f0c574;
   --text:     #f5f5f5;
   --muted:    #a0a0a8;
@@ -19,7 +19,6 @@ body {
   color: var(--text);
 }
 
-/* === Botones === */
 .btn-primary, .btn-secondary {
   display: inline-block;
   padding: .8rem 1.6rem;
@@ -36,7 +35,7 @@ body {
 .btn-sm { padding: .5rem 1rem; font-size: .9rem; }
 .btn-block { width: 100%; }
 
-/* === Títulos === */
+
 .section-title {
   font-size: clamp(1.8rem, 4vw, 2.5rem);
   text-align: center;
@@ -48,7 +47,6 @@ body {
   margin-bottom: 3rem;
 }
 
-/* === HERO === */
 .hero {
   min-height: 90vh;
   display: flex;
@@ -74,7 +72,6 @@ body {
 }
 .hero-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
 
-/* === SERVICES === */
 .services { padding: 5rem 1.5rem; background: var(--bg2); }
 .services-container { max-width: 1200px; margin: 0 auto; }
 .services-grid {
@@ -95,7 +92,7 @@ body {
 .service-desc { color: var(--muted); min-height: 48px; }
 .service-price { font-size: 1.5rem; color: var(--accent); font-weight: 800; margin: 1rem 0; }
 
-/* === MODAL === */
+
 .modal-overlay {
   position: fixed; inset: 0;
   background: rgba(0,0,0,.75);
@@ -119,7 +116,7 @@ body {
 }
 .modal-icon { font-size: 3rem; color: var(--accent); margin-bottom: 1rem; }
 
-/* === GALLERY === */
+
 .gallery { padding: 5rem 1.5rem; }
 .gallery-container { max-width: 1200px; margin: 0 auto; }
 .gallery-grid {
@@ -145,7 +142,7 @@ body {
 }
 .gallery-item:hover .gallery-overlay { opacity: 1; }
 
-/* === BOOKING === */
+
 .booking { padding: 5rem 1.5rem; background: var(--bg2); }
 .booking-container { max-width: 700px; margin: 0 auto; }
 .booking-form { display: flex; flex-direction: column; gap: 1rem; }
@@ -183,7 +180,7 @@ body {
   background: rgba(110,231,183,.1); padding: 1rem; border-radius: 10px;
 }
 
-/* === REVIEWS (acordeón) === */
+
 .reviews { padding: 5rem 1.5rem; }
 .reviews-container { max-width: 800px; margin: 0 auto; }
 .accordion-list { display: flex; flex-direction: column; gap: .8rem; }
@@ -210,7 +207,7 @@ body {
   max-height: 200px; padding: 0 1.5rem 1.2rem;
 }
 
-/* === FOOTER === */
+
 .footer { background: #07070a; padding: 3rem 1.5rem 1rem; }
 .footer-container {
   max-width: 1200px; margin: 0 auto;
@@ -230,13 +227,13 @@ body {
   border-top: 1px solid var(--border); color: var(--muted);
 }
 
-/* === Responsive === */
+
 @media (max-width: 768px) {
   .form-row { grid-template-columns: 1fr; }
   .footer-container { grid-template-columns: 1fr; text-align: center; }
   .social { justify-content: center; }
 }
-/* === RESERVATIONS (CRUD) === */
+
 .reservations { padding: 5rem 1.5rem; background: var(--bg2); }
 .reservations-container { max-width: 1000px; margin: 0 auto; }
 .empty-msg { text-align: center; color: var(--muted); padding: 2rem; }
@@ -265,7 +262,7 @@ body {
   padding: .5rem 1rem; border-radius: 999px; cursor: pointer; font-weight: 700;
 }
 
-/* === MENSAJES DE ESTADO === */
+
 .error-msg {
   display: block; color: #ff6b6b;
   font-size: .85rem; margin-top: .3rem;
@@ -278,7 +275,7 @@ body {
   text-align: center; color: var(--accent); padding: 2rem; font-size: 1.1rem;
 }
 
-/* === GALLERY FILTERS === */
+
 .gallery-filters {
   display: flex;
   justify-content: center;
@@ -307,7 +304,6 @@ body {
   font-weight: 700;
 }
 
-/* === GALLERY ITEMS (mejorado) === */
 .gallery-item {
   position: relative;
   overflow: hidden;
@@ -343,7 +339,7 @@ body {
 }
 .gallery-item:hover .gallery-overlay { opacity: 1; }
 
-/* === LIGHTBOX === */
+
 .lightbox-overlay {
   position: fixed;
   inset: 0;
@@ -390,7 +386,7 @@ body {
   margin-top: 1rem;
   font-size: 1.3rem;
 }
-/* === BARBERS (Equipo desde API) === */
+
 .barbers { padding: 5rem 1.5rem; }
 .barbers-container { max-width: 1200px; margin: 0 auto; }
 .barbers-container small { color: var(--accent); font-style: italic; }
@@ -468,7 +464,7 @@ body {
   margin-top: 1.5rem;
 }
 
-/* === SPINNER === */
+
 .spinner {
   width: 40px;
   height: 40px;
@@ -482,7 +478,6 @@ body {
   to { transform: rotate(360deg); }
 }
 
-/* === Loading message ya con spinner === */
 .loading-msg {
   text-align: center;
   color: var(--accent);

@@ -12,7 +12,7 @@ export default function Reviews() {
   const [openId, setOpenId] = useState(null)
 
   const toggle = (id) => {
-    setOpenId(openId === id ? null : id) // si ya está abierto, lo cierra
+    setOpenId(openId === id ? null : id)
   }
 
   return (

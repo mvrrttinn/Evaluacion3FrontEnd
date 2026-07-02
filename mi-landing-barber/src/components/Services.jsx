@@ -38,7 +38,7 @@ const services = [
 ]
 
 export default function Services() {
-  const [selected, setSelected] = useState(null) // servicio elegido
+  const [selected, setSelected] = useState(null)
 
   return (
     <section id="services" className="services">

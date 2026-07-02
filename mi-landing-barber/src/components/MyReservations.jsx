@@ -7,7 +7,6 @@ export default function MyReservations({ refreshKey }) {
   const [editandoId, setEditandoId] = useState(null)
   const [formEdit, setFormEdit] = useState({ fecha: '', hora: '' })
 
-  // READ: cargar al montar y cuando cambie refreshKey
   useEffect(() => {
     setReservas(getReservas())
   }, [refreshKey])
@@ -49,7 +48,6 @@ export default function MyReservations({ refreshKey }) {
             {reservas.map(r => (
               <div key={r.id} className="reservation-card">
                 {editandoId === r.id ? (
-                  // Modo edición
                   <>
                     <h4>{r.nombre} — {r.servicio}</h4>
                     <input
@@ -70,7 +68,6 @@ export default function MyReservations({ refreshKey }) {
                     </div>
                   </>
                 ) : (
-                  // Modo vista
                   <>
                     <h4><i className="bi bi-scissors"></i> {r.servicio}</h4>
                     <p><strong>Cliente:</strong> {r.nombre}</p>

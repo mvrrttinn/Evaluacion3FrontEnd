@@ -1,7 +1,5 @@
 // src/services/api.js
-// Capa de servicio para llamadas HTTP a APIs externas
 
-// Helper genérico con manejo robusto de errores
 async function fetchJSON(url, options = {}) {
   try {
     const controller = new AbortController()
@@ -27,12 +25,8 @@ async function fetchJSON(url, options = {}) {
   }
 }
 
-// ==========================================
-// 👥 EQUIPO DE BARBEROS (desde randomuser.me)
-// ==========================================
 const TEAM_API = 'https://randomuser.me/api/?results=4&nat=us,br,es&inc=name,picture,location'
 
-// Especialidades inventadas para asignar a cada barbero
 const especialidades = [
   { rol: 'Master Barber',        spec: 'Fade & Clásicos',     exp: '12 años' },
   { rol: 'Senior Stylist',       spec: 'Diseño de Barba',     exp: '8 años'  },
@@ -44,19 +38,17 @@ export async function getTeam() {
   const { data, error } = await fetchJSON(TEAM_API)
   if (error) return { data: null, error }
 
-  // Validar estructura de respuesta antes de procesar
   if (!data || !Array.isArray(data.results)) {
     return { data: null, error: 'Respuesta de API en formato inesperado' }
   }
 
-  // Mapear al formato que necesita la UI
   const team = data.results.map((person, i) => ({
     id: `${person.name.first}-${i}`,
     nombre: `${person.name.first} ${person.name.last}`,
     foto: person.picture.large,
     ciudad: person.location.city,
     pais: person.location.country,
-    ...especialidades[i % especialidades.length] // asigna rol/spec/exp
+    ...especialidades[i % especialidades.length]
   }))
 
   return { data: team, error: null }
