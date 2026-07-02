@@ -44,7 +44,6 @@ export default function Barbers() {
           Profesionales certificados · <small>(datos desde API en vivo )</small>
         </p>
 
-        {/* Estado 1: Cargando */}
         {loading && (
           <div className="loading-msg">
             <div className="spinner"></div>
@@ -52,7 +51,6 @@ export default function Barbers() {
           </div>
         )}
 
-        {/* Estado 2: Error con botón de reintentar */}
         {error && !loading && (
           <div className="error-box">
             <p>❌ <strong>Error al cargar el equipo:</strong></p>
@@ -63,7 +61,6 @@ export default function Barbers() {
           </div>
         )}
 
-        {/* Estado 3: Datos cargados */}
         {!loading && !error && (
           <>
             <div className="barbers-grid">
@@ -93,7 +90,6 @@ export default function Barbers() {
               ))}
             </div>
 
-            {/* Botón para recargar el equipo (refresca con nuevas personas) */}
             <div className="barbers-actions">
               <button className="btn-secondary" onClick={cargarEquipo}>
                  Cargar otro equipo

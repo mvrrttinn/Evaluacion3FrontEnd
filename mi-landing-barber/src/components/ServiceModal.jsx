@@ -2,7 +2,6 @@
 export default function ServiceModal({ service, onClose }) {
   return (
     <div className="modal-overlay" onClick={onClose}>
-      {/* stopPropagation evita que al hacer click dentro se cierre */}
       <div className="modal-box" onClick={(e) => e.stopPropagation()}>
         <button className="modal-close" onClick={onClose} aria-label="Cerrar">
           <i className="bi bi-x-lg"></i>

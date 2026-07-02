@@ -66,7 +66,6 @@ export default function Services() {
         </div>
       </div>
 
-      {/* Renderizado condicional del modal */}
       {selected && (
         <ServiceModal
           service={selected}

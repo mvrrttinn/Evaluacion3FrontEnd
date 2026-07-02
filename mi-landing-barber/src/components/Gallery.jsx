@@ -73,7 +73,6 @@ export default function Gallery() {
         <h2 className="section-title">Galería de Cortes</h2>
         <p className="section-subtitle">Inspírate con nuestros trabajos</p>
 
-        {/* Botones de filtro */}
         <div className="gallery-filters">
           {categorias.map(cat => (
             <button
@@ -86,7 +85,6 @@ export default function Gallery() {
           ))}
         </div>
 
-        {/* Grid de imágenes */}
         <div className="gallery-grid">
           {visibles.map(c => (
             <div
@@ -115,7 +113,6 @@ export default function Gallery() {
         )}
       </div>
 
-      {/* Lightbox: modal con la foto grande */}
       {seleccionada && (
         <div className="lightbox-overlay" onClick={() => setSeleccionada(null)}>
           <button className="lightbox-close" aria-label="Cerrar">

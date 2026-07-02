@@ -13,7 +13,6 @@ export default function Navbar() {
           Barber<span>Style</span>
         </a>
 
-        {/* Links escritorio */}
         <ul className="navbar-links">
           <li><a href="#services">Servicios</a></li>
           <li><a href="#gallery">Galería</a></li>
@@ -23,7 +22,6 @@ export default function Navbar() {
           <li><a href="#booking" className="navbar-cta">Reservar</a></li>
         </ul>
 
-        {/* Botón hamburguesa */}
         <button
           className={`hamburger ${isOpen ? 'open' : ''}`}
           onClick={() => setIsOpen(!isOpen)}
@@ -33,7 +31,6 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Menú móvil */}
       <div className={`mobile-menu ${isOpen ? 'open' : ''}`}>
         <a href="#services" onClick={closeMenu}>Servicios</a>
         <a href="#gallery" onClick={closeMenu}>Galería</a>

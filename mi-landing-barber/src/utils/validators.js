@@ -1,13 +1,11 @@
 // src/utils/validators.js
-// Validación y sanitización de inputs (desarrollo seguro)
 
-// Evita XSS básico: elimina tags HTML peligrosos
 export function sanitizeString(str) {
   if (typeof str !== 'string') return ''
   return str
-    .replace(/[<>]/g, '')           // elimina < y >
+    .replace(/[<>]/g, '')         
     .trim()
-    .slice(0, 100)                  // limita longitud
+    .slice(0, 100)                  
 }
 
 export function validarNombre(nombre) {
