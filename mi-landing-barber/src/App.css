@@ -483,3 +483,41 @@ body {
   color: var(--accent);
   padding: 2rem;
 }
+
+.booking-form select {
+  background: var(--card-bg);
+  color: var(--text);
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23d4a24a' stroke-width='2'%3e%3cpath d='M6 9l6 6 6-6'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1.2rem;
+  padding-right: 3rem;
+}
+
+
+.booking-form select option {
+  background: #16161c;      
+  color: #f5f5f5;            
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.booking-form select option:checked {
+  background: #d4a24a;       
+  color: #000;              
+  font-weight: 700;
+}
+
+
+.booking-form select option:hover {
+  background: #d4a24a;
+  color: #000;
+}
+
+.booking-form select:invalid,
+.booking-form select option[value=""] {
+  color: #888;
+}
