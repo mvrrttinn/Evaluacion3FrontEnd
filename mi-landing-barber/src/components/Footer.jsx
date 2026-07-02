@@ -9,7 +9,9 @@ export default function Footer() {
         </div>
         <div className="footer-col">
           <h4>Contacto</h4>
-          <p><i className="bi bi-instagram"></i> instagram.com/@barberstyle/</p>
+          <a href="https://www.instagram.com/barberstyle" target="_blank" rel="noopener noreferrer">
+            <p><i className="bi bi-envelope"></i> @barberstyle</p>
+          </a>
           <p><i className="bi bi-geo-alt"></i> Renca, Santiago</p>
           <p><i className="bi bi-telephone"></i> +569 1234 5678</p>
           <p><i className="bi bi-clock"></i> Lun-Sáb · 10:00 - 20:00</p>
@@ -17,9 +19,15 @@ export default function Footer() {
         <div className="footer-col">
           <h4>Síguenos</h4>
           <div className="social">
-            <a href="#"><i className="bi bi-instagram"></i></a>
-            <a href="#"><i className="bi bi-facebook"></i></a>
-            <a href="#"><i className="bi bi-whatsapp"></i></a>
+            <a href="https://www.instagram.com/barberstyle" target="_blank" rel="noopener noreferrer">
+              <i className="bi bi-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/barberstyle" target="_blank" rel="noopener noreferrer">
+              <i className="bi bi-facebook"></i>
+            </a>
+            <a href="https://wa.me/56912345678" target="_blank" rel="noopener noreferrer">
+              <i className="bi bi-whatsapp"></i>
+            </a>
           </div>
         </div>
       </div>
