@@ -1,12 +1,11 @@
 // src/components/Booking.jsx
 import { useState } from 'react'
-import { addReserva } from '../services/storage'
 import { validarReserva, sanitizeString } from '../utils/validators'
 
 const horarios = ['10:00', '11:00', '12:00', '15:00', '16:00', '17:00', '18:00', '19:00']
 const servicios = ['Corte Clásico', 'Afeitado con Navaja', 'Diseño de Barba', 'Combo Premium']
 
-export default function Booking({ onReservaCreada }) {
+export default function Booking() {
   const [form, setForm] = useState({
     nombre: '', telefono: '', servicio: '', fecha: '', hora: ''
   })
@@ -26,8 +25,6 @@ export default function Booking({ onReservaCreada }) {
       setErrores(erroresValidacion)
       return
     }
-
-
     const reservaLimpia = {
       nombre: sanitizeString(form.nombre),
       telefono: sanitizeString(form.telefono),
@@ -36,13 +33,11 @@ export default function Booking({ onReservaCreada }) {
       hora: form.hora
     }
 
-    const guardada = addReserva(reservaLimpia)
-    if (guardada) {
-      setEnviado(true)
-      setTimeout(() => setEnviado(false), 4000)
-      setForm({ nombre: '', telefono: '', servicio: '', fecha: '', hora: '' })
-      if (onReservaCreada) onReservaCreada()    
-    }
+    console.log('Reserva enviada:', reservaLimpia)
+
+    setEnviado(true)
+    setTimeout(() => setEnviado(false), 5000)
+    setForm({ nombre: '', telefono: '', servicio: '', fecha: '', hora: '' })
   }
 
   return (
@@ -100,7 +95,7 @@ export default function Booking({ onReservaCreada }) {
 
           {enviado && (
             <p className="success-msg">
-             ¡Reserva guardada! Revisa tus reservas más abajo.
+              ¡Reserva enviada correctamente! Te contactaremos para confirmar.
             </p>
           )}
         </form>
